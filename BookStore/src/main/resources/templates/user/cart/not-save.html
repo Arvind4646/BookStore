@@ -1,0 +1,15 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link th:href='@{/CSS/bg.css}' rel='stylesheet'>
+</head>
+<body class='bg'>
+ <div th:insert="user/top"></div>
+ <div class='bg-light p-5' style='max-width:500px;margin:50px auto 0px;border-radius:10px;text-align:center'>
+  <label class='h3' style='color:red;'>This book is already in cart</label>
+ </div>
+ <div class='dvv'>
+   <a href='/cart/cart-items' class='btn btn-primary'>View Cart</a>
+   <input type='button' class='btn btn-success' onclick="history.back()" value='Add Other'>
+ </div>
+</body>
+</html>

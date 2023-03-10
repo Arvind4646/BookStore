@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link th:href='@{/CSS/login.css}' rel='stylesheet'>
+  <link th:href='@{/CSS/bg.css}' rel='stylesheet'>
+</head>
+<body class="bg">
+<div th:insert="linkbootstrap"></div>
+  <div class="wrapper row bg-white mb-2 py-3 d-flex justify-content-center" style='margin: 50px auto;'>
+    <a class="col-6"><button class="py-2 w-100 button">Admin Login</button></a>
+    <a class="col-6" href='/bookstore/userlogin'><button class="py-2 w-100 button">User Login</button></a>
+  </div>
+
+  <div class="wrapper bg-white mt-0 pb-2">
+    <div class="h2 text-center">ADMIN LOGIN</div>
+    <div class="h4 text-center pt-2">Sign into your account</div>
+    <form class="pt-3" action='admin-authentication' method='post'>
+        <div class="form-group py-2">
+        <div class="h5">
+        <label>Enter Username</label>
+        </div>
+            <div class="input-field mt-3">
+             <input type="text" value="admin" name="aid" required> 
+            </div>
+        </div>
+        <div class="form-group py-2">
+        <div class="h5">
+        <label>Enter Password</label>
+        </div>
+            <div class="input-field mt-3">
+            <input type="Password" value="admin" name="apass" required> 
+            </div>
+        </div>
+        <button class="btn btn-block text-center my-4 container-fluid">Log in</button>
+        <div style="text-align:center;margin-top:1vw" >
+           <label th:text="${msg}" style='color:red;font-size:1.5vw;'></label>
+        </div>
+    </form>
+  </div>
+</body>
+</html>

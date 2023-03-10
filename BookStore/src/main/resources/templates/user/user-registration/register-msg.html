@@ -1,0 +1,20 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href='../CSS/style.css' rel='stylesheet'>
+   <link th:href='@{/CSS/bg.css}' rel='stylesheet'>
+  <link href='../CSS/bootstrap.min.css' rel='stylesheet'>
+</head>
+<body class='bg'>
+<div class='bg-light py-5 mt-5' style='max-width:700px;border-radius:10px;margin-left:auto;margin-right:auto'>
+ <div class='text-center'>
+  <label class='lah' style='color:black'>Congratulations!!! </label>
+  <label class='lah' style='color:black' th:text='${name}'></label>
+  <br><br>
+  <label class='la' style='color:green'>You have been registered successfully</label>
+ </div>
+ <div class='dvv'>
+   <a href='/bookstore/userlogin' class='btn btn-secondary' style='font-size:1.5vw'>Click to Login</a>
+ </div>
+ </div>
+</body>
+</html>

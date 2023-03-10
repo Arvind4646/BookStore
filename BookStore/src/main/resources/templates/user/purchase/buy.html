@@ -1,0 +1,14 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link th:href='@{/CSS/bg.css}' rel='stylesheet'>
+</head>
+<body class='bg'>
+ <div th:insert="/user/top"></div>
+ <div class='dv'>
+  <label style='color:lightgreen;font-size:2.5vw;font-weight:bold'>You have purchased book successfully</label>
+ </div>
+ <div class='dvv'>
+   <a href='/user/home' class='btl'>Buy more books</a>
+ </div>
+</body>
+</html>

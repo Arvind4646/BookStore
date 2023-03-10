@@ -1,0 +1,62 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+ <head>
+   <script th:src="@{/JS/script.js}"> </script>
+   <link th:href='@{/CSS/log.css}' rel='stylesheet'>
+   <link th:href='@{/CSS/bg.css}' rel='stylesheet'>
+ </head>
+<body class="bg">
+<div th:insert="linkbootstrap"></div>
+  <div class='d-flex justify-content-center my-4 bg-light' style='max-width:400px;margin:0px auto;border-radius:10px'>
+        <label class='h1' style='color:#400485;'>User Registration</label>
+       </div>
+     <div class='container'>
+      <div class='card mx-auto col-md-10'>
+       <div class='card-body'>
+        <div class='dvv'>
+         <label class='la' style='color:red' th:text='${msg}'></label>
+        </div>
+        <form action="registerme" method="post" th:object="${user}">
+        <div class='row form-group'>
+           <div class='col-md-10'>
+                <label  class="mb-2 h6" for="userid">Enter user id</label><span> *</span>
+                <input type='text' th:field="*{userid}" id='userid' class='form-control mb-3' required/>
+           </div>
+         </div>
+         <div class='row form-group'>
+           <div class='col-md-5'>
+                <label  class="mb-2 h6" for="password">Enter password</label><span> *</span>
+                <input type='password' th:field="*{password}" id='password' class='form-control mb-3' required/>
+           </div>
+           <div class='col-md-5'>
+                <label class="mb-2 h6" for="rpassword">Confirm password</label><span> *</span>
+                <input type='password' name="rpassword" id='rpassword' class='form-control mb-3' required/>
+           </div>
+         </div>
+         <div class='row form-group'>
+           <div class='col-md-5'>
+               <label  class="mb-2 h6" for="name">Enter name</label><span> *</span>
+                <input type='text' id='name' th:field="*{name}" class='form-control mb-3' required/>
+          </div>
+          <div class='col-md-5'>
+                <label  class="mb-2 h6" for="phone">Enter phone number</label><span> *</span>
+                <input type='text' th:field="*{phone}" id='phone' class='form-control mb-3' required/>
+           </div>
+         </div>
+         <div class='row form-group'>
+          <div class='col-md-10'>
+                <label  class="mb-2 h6" for="address">Enter address</label><span> *</span>
+                <input type='text' th:field="*{address}" id='address' class='form-control mb-3' required/>
+           </div>
+        </div>
+        <div class='row form-group'>
+          <div class='col-md-10 my-3'>
+                <button class='btn btn-primary' onclick='return matchPassword()'>Register Me</button>
+                <input type='button' class='btn btn-warning' style='background-color:orange' onclick="history.back()" value='Cancel'>
+          </div>
+        </div>
+        </form>
+       </div>
+      </div>
+     </div>
+</body>
+</html>
